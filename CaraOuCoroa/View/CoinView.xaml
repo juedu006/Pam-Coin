@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CaraOuCoroa.View.CoinView"
+             >
+    <VerticalStackLayout>
+        <Image
+            x:Name="CoinImg"
+            Source="caracoroa_icon.png"
+            WidthRequest="200"
+            HeightRequest="200"
+            />
+
+        <Label
+            x:Name="LabelResult"
+            Text=""
+            HorizontalTextAlignment="Center"
+            Margin="15"
+            />
+
+        <Label 
+            Text="Bem Vindo ao Jogo de Cara ou Coroa"
+            VerticalOptions="Center" 
+            FontSize="Title"
+            HorizontalTextAlignment="Center"
+            Margin="15"
+            />
+
+        <Picker
+            x:Name="EscolherLado"
+            Title="Escolha Cara ou Coroa"
+            WidthRequest="250"
+            Margin="15"
+            >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Cara</x:String>
+                    <x:String>Coroa</x:String>
+                </x:Array> 
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button
+            x:Name="JogarMoeda"
+            Text="Jogar"
+            Clicked="JogarMoeda_Clicked"
+            Margin="15"
+            WidthRequest="250"
+            HorizontalOptions="Center" 
+            BackgroundColor="Purple"
+            TextColor="White"
+            />
+
+    </VerticalStackLayout>
+</ContentPage>
